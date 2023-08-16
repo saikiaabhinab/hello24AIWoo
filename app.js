@@ -1,12 +1,12 @@
-// const WooCommerceAPI = require("woocommerce-api");
-const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
-// const WooCommerceAPI = require("@woocommerce/woocommerce-rest-api").default;
+const dotenv = require('dotenv');
+dotenv.config()
 
-// WooCommerce API credentials
+const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
+
 const WooCommerce = new WooCommerceRestApi({
     url: "https://ninjashop.in",
-    consumerKey: "ck_bcc829bb7da7954f7487748a9963e966cef16c71",
-    consumerSecret: "cs_0e50ba69c14687741ff1252295d26eb70368e94d",
+    consumerKey: process.env.CONSUMER_KEY,
+    consumerSecret: process.env.CONSUMER_SECRET,
     // wpAPI: true,
     version: "wc/v3",
 });
