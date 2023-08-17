@@ -1,7 +1,7 @@
-const dotenv = require('dotenv');
-dotenv.config()
-
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
+const dotenv = require('dotenv');
+
+dotenv.config()
 
 const WooCommerce = new WooCommerceRestApi({
     url: "https://ninjashop.in",
